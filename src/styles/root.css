@@ -1,0 +1,14 @@
+:root{
+  --principal_bg: linear-gradient(to bottom, #D1C4E9 40%,#B3E5FC);
+  --aside_bg: #F2F2F2;
+  --title_font: "Poppins", sans-serif;
+  --subtitle_font: "Lato", sans-serif;
+  --text-font: "Montserrat", sans-serif;
+  --title-color: #9575CD;
+  --text-color: #424242;
+  --borders_separation-color: #B3E5FC;
+  --button_links-color: #A6CEE3;
+  --buttons_links_hover-color: #d1c4e9;
+  --bg-buttons: var(--title-color);
+  --bg-item_check: conic-gradient(from 90deg at 50% 50%, #9575cd, #d1c4e9, #9575cd);
+}

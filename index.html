@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="src/styles/index.css">
+    <link rel="stylesheet" href="src/styles/layoutStyles.css">
 </head>
 
 <body>
@@ -34,32 +34,48 @@
                         </form>
                     </section>
                     <section id="tasks-progress">
-                        <h3>Haz completado 0 tareas de 0</h3>
+                        <h3>0 Task Completed from: 0</h3>
                         <div class="radial-progress">
                             <div class="progress-caption"><span>0%</span><span>Completado</span></div>
                         </div>
                     </section>
                 </aside>
                 <article id="task-list-frame" class="content-block">
-                    <h3>Task List</h3>
-                    <ul id="task-list">
-                        <li class="task-item">
-                            <label>
-                                <input type="checkbox">
-                                <div class="task-check">
-                                    <div class="task-check-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
-                                            viewBox="0 0 24 24">
-                                            <path fill="black"
-                                                d="m9.55 17.308l-4.97-4.97l.714-.713l4.256 4.256l9.156-9.156l.713.714z" />
-                                        </svg>
+                    <section id="task-search">
+                        <form>
+                            <input type="text" name="search" id="search" placeholder="Find Task...">
+                            <button type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 16 16">
+                                    <path fill="black"
+                                        d="m11.271 11.978l3.872 3.873a.5.5 0 0 0 .708 0a.5.5 0 0 0 0-.708l-3.565-3.564c2.38-2.747 2.267-6.923-.342-9.532c-2.73-2.73-7.17-2.73-9.898 0s-2.728 7.17 0 9.9a6.96 6.96 0 0 0 4.949 2.05a.5.5 0 0 0 0-1a5.96 5.96 0 0 1-4.242-1.757a6.01 6.01 0 0 1 0-8.486a6.004 6.004 0 0 1 8.484 0a6.01 6.01 0 0 1 0 8.486a.5.5 0 0 0 .034.738" />
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="separator"></div>
+                    </section>
+                    <section id="task-list--inner">
+                        <h3>Task List</h3>
+                        <ul id="task-list">
+                            <li class="task-item">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="task-check">
+                                        <div class="task-check-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em"
+                                                viewBox="0 0 24 24">
+                                                <path fill="black"
+                                                    d="m9.55 17.308l-4.97-4.97l.714-.713l4.256 4.256l9.156-9.156l.713.714z" />
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="task-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ab, suscipit
-                                    incidunt tempora modi consequuntur minima dicta ex, qui, laudantium adipisci quos?
-                                    Magnam iure perspiciatis autem quod tempore, ipsa voluptate.
-                                </div>
+                                    <div class="task-description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ab,
+                                        suscipit
+                                        incidunt tempora modi consequuntur minima dicta ex, qui, laudantium adipisci
+                                        quos?
+                                        Magnam iure perspiciatis autem quod tempore, ipsa voluptate.
+                                    </div>
+                                </label>
                                 <div class="task-delete">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
                                         viewBox="0 0 24 24">
@@ -67,9 +83,9 @@
                                             d="M12.012 2.004C6.492 2 2.013 6.474 2.01 11.994S6.48 21.993 12 21.996a9.996 9.996 0 0 0 10.002-9.99c.003-5.52-4.47-9.999-9.99-10.002m0 18.992A8.996 8.996 0 1 1 12 3.004a8.996 8.996 0 0 1 .012 17.992M12.707 12l3.182-3.182a.5.5 0 0 0-.707-.707L12 11.293L8.818 8.111a.5.5 0 0 0-.707.707L11.293 12l-3.182 3.182a.5.5 0 0 0 .707.707L12 12.707l3.182 3.182a.5.5 0 0 0 .707-.707z" />
                                     </svg>
                                 </div>
-                            </label>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </section>
                 </article>
             </main>
         </section>

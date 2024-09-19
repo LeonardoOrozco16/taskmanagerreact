@@ -1,0 +1,53 @@
+/*Tasks Progress*/
+#tasks-progress, #tasks-progress .progress-caption,#tasks-progress .radial-progress{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#tasks-progress{
+  position: relative;
+  flex-direction: column;
+  h3{
+    text-align: center;
+  }
+  .radial-progress{
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(var(--title-color) 270deg, var(--aside_bg) 0deg);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.50s all ease;
+    -webkit-transition: 0.50s all ease;
+    -moz-transition: 0.50s all ease;
+    -ms-transition: 0.50s all ease;
+    -o-transition: 0.50s all ease;
+}
+  .progress-caption{
+    background: var(--aside_bg);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    flex-direction: column;
+    span{
+      display: block;
+      font-family: var(--title_font);
+      color: var(--title-color);
+      &:first-child{
+        font-size: 18px;
+        font-weight: 600;
+      }
+      &:last-child{
+        font-size: 13px;
+      }
+    }
+  }
+}
+/*Task Progress*/

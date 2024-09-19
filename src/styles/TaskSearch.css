@@ -1,0 +1,25 @@
+/* Task Search */
+#task-search{
+  form{
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 1fr;
+    grid-row-gap: 0;
+    margin-bottom: 50px;
+    button{
+      svg{
+        path{
+          fill: var(--aside_bg);
+        }
+      }
+    }
+  }
+  .separator{
+   position: relative;
+   display: block;
+   width: 100%;
+   padding: 0.6px 0;
+   background: linear-gradient(to right, transparent,var(--borders_separation-color),var(--title-color),  var(--borders_separation-color),transparent);
+  }
+}
+/* Task Search*/

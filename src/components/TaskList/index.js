@@ -1,4 +1,4 @@
-import "../styles/TaskList.css";
+import "./styles/TaskList.css";
 function TaskList(props) {
   return (
     <>

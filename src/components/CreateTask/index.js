@@ -1,5 +1,5 @@
 import { CreateTaskButton } from "./CreateTaskButton";
-import "../styles/CreateTask.css";
+import "./styles/CreateTask.css";
 
 function CreateTask() {
   return (

@@ -1,4 +1,4 @@
-import "../styles/TaskProgress.css";
+import "./styles/TaskProgress.css";
 function TaskProgress({ total, completed, percentProgress, degBarProgress }) {
   return (
     <section id="tasks-progress">

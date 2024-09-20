@@ -1,5 +1,5 @@
-import "../styles/TaskItem.css";
-import { IconComponent } from "./layout/IconComponent";
+import "./styles/TaskItem.css";
+import { IconComponent } from "../layout/IconComponent";
 function TaskItem(props) {
   let isChecked = props.completed ? true : false;
   return (

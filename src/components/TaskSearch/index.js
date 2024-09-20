@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/TaskSearch.css";
-import { IconComponent } from "./layout/IconComponent";
+import "./styles/TaskSearch.css";
+import { IconComponent } from "../layout/IconComponent";
 
 function TaskSearch({ searchValue, setSearchValue }) {
   const searchTask = (event) => {

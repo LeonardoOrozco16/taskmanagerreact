@@ -26,8 +26,18 @@ const TasksExample = [
 ];
 
 function App() {
+  /* Persistence Data */
+  const namePersistence = "REACT_TASKS_V1";
+  let parsedTasks = JSON.parse(
+    localStorage.getItem(namePersistence) || JSON.stringify(TasksExample)
+  );
+  const saveTasks = (Tasks) => {
+    localStorage.setItem(namePersistence, JSON.stringify(Tasks));
+    setTasks(Tasks);
+  };
+  /* Persistence Data */
   const [searchValue, setSearchValue] = React.useState(" ");
-  const [tasks, setTasks] = React.useState(TasksExample);
+  const [tasks, setTasks] = React.useState(parsedTasks);
   /* Progress Tasks States*/
   let completedTasks = tasks.filter((task) => !!task.completed).length;
   let totalTasks = tasks.length;
@@ -49,7 +59,7 @@ function App() {
       (task) => task.description === description
     );
     updatedTasks[taskIndex].completed = !updatedTasks[taskIndex].completed;
-    setTasks(updatedTasks);
+    saveTasks(updatedTasks);
   };
   /* Complete Task */
   /* Delete Task */
@@ -59,30 +69,11 @@ function App() {
       (task) => task.description === description
     );
     updatedTasks.splice(taskIndex, 1);
-    setTasks(updatedTasks);
+    saveTasks(updatedTasks);
   };
   /* Delete Task */
+
   return (
-    //<div className="App">
-    //El elemento html que encapsula los componentes puede ser sustituido
-    // si se usa React.fragment y para ello se debe importar React from 'react'
-    /*<React.Fragment>
-      <TaskProgress completed={4} total={10} />
-      <TaskSearch />
-      <TaskList>
-        {
-          TasksExample.map(task => (
-            <TaskItem
-              key={task.description}
-              description={task.description}
-              completed={task.completed}
-            />
-          ))
-        }
-      </TaskList>
-      <CreateTaskButton />
-    </React.Fragment>*/
-    //</div>
     <>
       <AppLayout>
         <CreateProgressColumn>

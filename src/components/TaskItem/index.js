@@ -15,7 +15,7 @@ function TaskItem(props) {
             <IconComponent type={"check"} />
           </div>
         </div>
-        <div className="task-description">{props.description}</div>
+        <div className="task-description">{props.content}</div>
       </label>
       <div className="task-delete" onClick={props.onDelete}>
         <IconComponent type={"delete"} />

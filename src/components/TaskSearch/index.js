@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles/TaskSearch.css";
 import { IconComponent } from "../layout/IconComponent";
-
-function TaskSearch({ searchValue, setSearchValue }) {
+import { TaskContext } from "../../hooks/taskContext";
+function TaskSearch() {
+  const { searchValue, setSearchValue } = React.useContext(TaskContext);
   const searchTask = (event) => {
     let taskToFind = event.target.closest("input").value;
     setSearchValue(taskToFind);

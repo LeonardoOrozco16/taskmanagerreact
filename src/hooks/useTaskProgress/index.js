@@ -5,7 +5,6 @@ export function useTaskProgress(tasks) {
   const totalTasks = tasks.length;
   const percentProgress =
     completedTasks === 0 ? 0 : Math.round((completedTasks * 100) / totalTasks);
-  const degBarProgress = percentProgress * 3.6;
   const [progress, setProgress] = React.useState(0);
   React.useEffect(() => {
     const inverval = setInterval(() => {
@@ -26,8 +25,6 @@ export function useTaskProgress(tasks) {
   return {
     completedTasks,
     totalTasks,
-    percentProgress,
-    degBarProgress,
     progress,
   };
 }

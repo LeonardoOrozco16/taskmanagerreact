@@ -10,6 +10,7 @@ import { TaskProgress } from "../components/TaskProgress";
 import { TaskSearch } from "../components/TaskSearch";
 import { TaskList } from "../components/TaskList";
 import { TaskItem } from "../components/TaskItem";
+import { TaskItemSkelleton } from "../components/TaskItem/TaskItemSkelleton";
 import { Modal } from "../components/Modal";
 // -- Components
 
@@ -36,11 +37,21 @@ function AppUI() {
         <SearchListColumn>
           <TaskSearch />
           <TaskList>
-            {loading && <p>Cargando Tareas...</p>}
-            {error && <p>Ocurrio un error, intente de nuevo mas tarde </p>}
-            {!loading && totalTasks === 0 && <p>Agrega tu primera tarea.</p>}
+            {loading && (
+              <>
+                <TaskItemSkelleton />
+                <TaskItemSkelleton />
+                <TaskItemSkelleton />
+              </>
+            )}
+            {error && (
+              <h5 className={`error`}>
+                Ocurrio un error, intente de nuevo mas tarde
+              </h5>
+            )}
+            {!loading && totalTasks === 0 && <h5>Agrega tu primera tarea.</h5>}
             {!loading && searchedTask.length === 0 && (
-              <p>No se encontro ninguna tarea.</p>
+              <h4>No se encontro ninguna tarea.</h4>
             )}
             {searchedTask.map((task) => (
               <TaskItem

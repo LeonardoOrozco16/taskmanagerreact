@@ -2,14 +2,39 @@
 #task-search{
   form{
     display: grid;
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-row-gap: 0;
     margin-bottom: 50px;
-    button{
+    position: relative;
+    input[type="text"]{
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      &:focus{
+        ~ span{
+          svg{
+            path{
+              fill: var( --borders_separation-color);
+            }
+          }
+        }
+      }
+    }
+    span{
+      position: absolute;
+      top: 52%;
+      left: calc(100% - 2em);
+      transform: translate(-5px,-50%);
+      -webkit-transform: translate(-5px,-50%);
+      -moz-transform: translate(-5px,-50%);
+      -ms-transform: translate(-5px,-50%);
+      -o-transform: translate(-5px,-50%);
       svg{
         path{
-          fill: var(--aside_bg);
+          fill: var( --title-color);
         }
       }
     }

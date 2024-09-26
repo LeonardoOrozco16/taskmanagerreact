@@ -4,8 +4,9 @@ import { IconComponent } from "../layout/IconComponent";
 import { TaskContext } from "../../hooks/taskContext";
 function TaskSearch() {
   const { searchValue, setSearchValue } = React.useContext(TaskContext);
-  const searchTask = (event) => {
-    let taskToFind = event.target.closest("input").value;
+  const searchTask = (text) => {
+    let taskToFind = text;
+
     setSearchValue(taskToFind);
   };
   return (
@@ -19,18 +20,12 @@ function TaskSearch() {
             value={searchValue}
             placeholder="Find Task..."
             onChange={(e) => {
-              searchTask(e);
+              searchTask(e.target.value);
             }}
           />
-          <button
-            type="button"
-            aria-label="Search Task"
-            onClick={(e) => {
-              searchTask(e);
-            }}
-          >
+          <span className="input-search--icon">
             <IconComponent type={"search"} />
-          </button>
+          </span>
         </form>
         <div className="separator"></div>
       </section>

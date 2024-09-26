@@ -6,7 +6,7 @@ import { useTaskProgress } from "../useTaskProgress";
 const TaskContext = React.createContext();
 
 function TaskProvider({ children }) {
-  const [searchValue, setSearchValue] = React.useState(" ");
+  const [searchValue, setSearchValue] = React.useState("");
   /* Using Custom Hook */
   const {
     item: tasks,
@@ -53,13 +53,7 @@ function TaskProvider({ children }) {
   };
   /* Delete Task */
   /* Progress Tasks States*/
-  const {
-    completedTasks,
-    totalTasks,
-    percentProgress,
-    degBarProgress,
-    progress,
-  } = useTaskProgress(tasks);
+  const { completedTasks, totalTasks, progress } = useTaskProgress(tasks);
   /* Progress Tasks States*/
   /*Portals EXample*/
   const [openModal, setOpenModal] = React.useState(false);
@@ -71,8 +65,6 @@ function TaskProvider({ children }) {
         error,
         completedTasks,
         totalTasks,
-        percentProgress,
-        degBarProgress,
         searchValue,
         searchedTask,
         setSearchValue,

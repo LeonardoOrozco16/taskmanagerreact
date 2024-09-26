@@ -7,7 +7,8 @@ function CreateTask() {
   const { createTask } = React.useContext(TaskContext);
   const [newTask, setNewTask] = React.useState("");
   const checkTask = (event) => {
-    setNewTask(event.target.value);
+    let taskContent = event.target.value;
+    setNewTask(taskContent);
   };
   return (
     <section id="create-task">
@@ -16,6 +17,7 @@ function CreateTask() {
         onSubmit={(event) => {
           event.preventDefault();
           createTask(newTask);
+          setNewTask("");
         }}
       >
         <input
@@ -23,6 +25,7 @@ function CreateTask() {
           name="task-description"
           id="task-description"
           placeholder="Hacer el almuerzo"
+          value={newTask}
           onChange={(event) => {
             checkTask(event);
           }}

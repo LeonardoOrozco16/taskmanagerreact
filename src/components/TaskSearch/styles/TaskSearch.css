@@ -16,6 +16,8 @@
       &:focus{
         ~ span{
           svg{
+            width: 40px;
+            height: 40px;
             path{
               fill: var( --borders_separation-color);
             }
